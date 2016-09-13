@@ -4,7 +4,7 @@
 
 ####App runtime effect
 
-<img src="https://github.com/dyljqq/DJStock-Swift/raw/master/ScreenShot/1.png" width="375" height="675"/> 
+<img src="https://github.com/dyljqq/DJStock-Swift/raw/master/ScreenShot/1.png" width="187.5" height="337.5"/> 
 
 ####Todo:
 
