@@ -21,6 +21,10 @@ class ViewController: UIViewController {
         kLine = DJKLine(frame: CGRectMake(0, 100, screenWidth, 300))
         self.view.addSubview(kLine)
         
+        let gesture = UIPinchGestureRecognizer(target: kLine, action: #selector(kLine.pinch(_:)))
+        kLine.addGestureRecognizer(gesture)
+        kLine.userInteractionEnabled = true
+        
         getKLineInfo()
     }
     

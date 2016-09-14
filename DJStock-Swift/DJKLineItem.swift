@@ -8,18 +8,18 @@
 
 import UIKit
 
-class DJKLineItem: UIView {
+enum KLineColor {
+    case Red, Green
     
-    enum KLineColor {
-        case Red, Green
-        
-        var description: UIColor {
-            switch self {
-            case .Red: return RGB(red: 205, green: 91, blue: 82)
-            default: return RGB(red: 32, green: 165, blue: 51)
-            }
+    var description: UIColor {
+        switch self {
+        case .Red: return RGB(red: 205, green: 91, blue: 82)
+        default: return RGB(red: 32, green: 165, blue: 51)
         }
     }
+}
+
+class DJKLineItem: UIView {
     
     var colorType = KLineColor.Red
     
