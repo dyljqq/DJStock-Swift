@@ -1,6 +1,7 @@
 ##A stock graph
 
 2016.9.13 complete the kline
+
 2016.9.14 add pinch gesture to kline, add volumn view and so on...
 
 ####App runtime effect
