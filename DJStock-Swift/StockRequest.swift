@@ -9,9 +9,6 @@
 import Foundation
 import Alamofire
 
-typealias SuccessCallback = (value: [String: AnyObject])-> ()
-typealias FailureCallback = (error: NSError)-> ()
-
 class StockRequest {
     
     class func get(URLString URLString: String,

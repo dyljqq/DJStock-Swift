@@ -10,6 +10,11 @@
 		15200BE863F7615C0B847836 /* Pods_DJStock_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0380F3FD6F0F252985B904D0 /* Pods_DJStock_Swift.framework */; };
 		731980F61D89259A0077A774 /* DJDataWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731980F51D89259A0077A774 /* DJDataWindow.swift */; };
 		731980F81D8931FC0077A774 /* DJExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731980F71D8931FC0077A774 /* DJExtention.swift */; };
+		731980FA1D8E310B0077A774 /* DJCurveLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731980F91D8E310B0077A774 /* DJCurveLine.swift */; };
+		731980FC1D8E35B80077A774 /* DJShareTimeGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731980FB1D8E35B80077A774 /* DJShareTimeGraph.swift */; };
+		731980FE1D8E39DB0077A774 /* DJShareTimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731980FD1D8E39DB0077A774 /* DJShareTimeModel.swift */; };
+		731981001D8E5C7A0077A774 /* DJRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731980FF1D8E5C7A0077A774 /* DJRequest.swift */; };
+		731981021D8E8A610077A774 /* DJSegmentLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731981011D8E8A610077A774 /* DJSegmentLine.swift */; };
 		739DD7711D87AAA9008FCE75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739DD7701D87AAA9008FCE75 /* AppDelegate.swift */; };
 		739DD7731D87AAA9008FCE75 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739DD7721D87AAA9008FCE75 /* ViewController.swift */; };
 		739DD7761D87AAA9008FCE75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 739DD7741D87AAA9008FCE75 /* Main.storyboard */; };
@@ -35,6 +40,11 @@
 		30C3BE582F49152018BA20A0 /* Pods-DJStock-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DJStock-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DJStock-Swift/Pods-DJStock-Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		731980F51D89259A0077A774 /* DJDataWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJDataWindow.swift; sourceTree = "<group>"; };
 		731980F71D8931FC0077A774 /* DJExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJExtention.swift; sourceTree = "<group>"; };
+		731980F91D8E310B0077A774 /* DJCurveLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJCurveLine.swift; sourceTree = "<group>"; };
+		731980FB1D8E35B80077A774 /* DJShareTimeGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJShareTimeGraph.swift; sourceTree = "<group>"; };
+		731980FD1D8E39DB0077A774 /* DJShareTimeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJShareTimeModel.swift; sourceTree = "<group>"; };
+		731980FF1D8E5C7A0077A774 /* DJRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJRequest.swift; sourceTree = "<group>"; };
+		731981011D8E8A610077A774 /* DJSegmentLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJSegmentLine.swift; sourceTree = "<group>"; };
 		739DD76D1D87AAA9008FCE75 /* DJStock-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DJStock-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		739DD7701D87AAA9008FCE75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		739DD7721D87AAA9008FCE75 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +149,11 @@
 				739DD79B1D88F695008FCE75 /* DJExtension.swift */,
 				731980F51D89259A0077A774 /* DJDataWindow.swift */,
 				731980F71D8931FC0077A774 /* DJExtention.swift */,
+				731980F91D8E310B0077A774 /* DJCurveLine.swift */,
+				731980FB1D8E35B80077A774 /* DJShareTimeGraph.swift */,
+				731980FD1D8E39DB0077A774 /* DJShareTimeModel.swift */,
+				731980FF1D8E5C7A0077A774 /* DJRequest.swift */,
+				731981011D8E8A610077A774 /* DJSegmentLine.swift */,
 			);
 			name = Chart;
 			sourceTree = "<group>";
@@ -271,15 +286,20 @@
 				739DD7861D87C9B8008FCE75 /* Color.swift in Sources */,
 				739DD7901D87E0C6008FCE75 /* DJKLine.swift in Sources */,
 				731980F61D89259A0077A774 /* DJDataWindow.swift in Sources */,
+				731980FC1D8E35B80077A774 /* DJShareTimeGraph.swift in Sources */,
 				739DD7961D87FE21008FCE75 /* DJDashLine.swift in Sources */,
+				731980FA1D8E310B0077A774 /* DJCurveLine.swift in Sources */,
 				731980F81D8931FC0077A774 /* DJExtention.swift in Sources */,
 				739DD7731D87AAA9008FCE75 /* ViewController.swift in Sources */,
+				731981021D8E8A610077A774 /* DJSegmentLine.swift in Sources */,
 				739DD7881D87D546008FCE75 /* StockRequest.swift in Sources */,
+				731980FE1D8E39DB0077A774 /* DJShareTimeModel.swift in Sources */,
 				739DD79A1D88E79C008FCE75 /* DJVolumnItemView.swift in Sources */,
 				739DD7921D87E832008FCE75 /* Utility.swift in Sources */,
 				739DD7711D87AAA9008FCE75 /* AppDelegate.swift in Sources */,
 				739DD7841D87C27B008FCE75 /* DJKLineItem.swift in Sources */,
 				739DD78E1D87DAF9008FCE75 /* KLine.swift in Sources */,
+				731981001D8E5C7A0077A774 /* DJRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
