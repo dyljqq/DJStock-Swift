@@ -21,7 +21,7 @@ struct VolumnItem {
     var color: KLineColor
 }
 
-class DJKLine: UIView {
+public class DJKLine: UIView {
     
     struct Constant {
         static let dashLineNum = 3
@@ -99,12 +99,16 @@ class DJKLine: UIView {
         }
     }
     
+    convenience init() {
+        self.init(frame: CGRectZero)
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     

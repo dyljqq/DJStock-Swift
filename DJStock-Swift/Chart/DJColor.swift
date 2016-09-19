@@ -16,6 +16,8 @@ let clearColor = UIColor.clearColor()
 let whiteColor = UIColor.whiteColor()
 let redColor = UIColor.redColor()
 let blackColor = UIColor.blackColor()
+let orangeColor = UIColor.orangeColor()
+let blueColor = UIColor.blueColor()
 
 let textGrayColor = RGB(red: 175, green: 175, blue: 175)
 let lineColor = RGB(red: 204, green: 204, blue: 204)

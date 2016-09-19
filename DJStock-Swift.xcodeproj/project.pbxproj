@@ -8,43 +8,62 @@
 
 /* Begin PBXBuildFile section */
 		15200BE863F7615C0B847836 /* Pods_DJStock_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0380F3FD6F0F252985B904D0 /* Pods_DJStock_Swift.framework */; };
-		731980F61D89259A0077A774 /* DJDataWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731980F51D89259A0077A774 /* DJDataWindow.swift */; };
-		731980F81D8931FC0077A774 /* DJExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731980F71D8931FC0077A774 /* DJExtention.swift */; };
-		731980FA1D8E310B0077A774 /* DJCurveLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731980F91D8E310B0077A774 /* DJCurveLine.swift */; };
-		731980FC1D8E35B80077A774 /* DJShareTimeGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731980FB1D8E35B80077A774 /* DJShareTimeGraph.swift */; };
-		731980FE1D8E39DB0077A774 /* DJShareTimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731980FD1D8E39DB0077A774 /* DJShareTimeModel.swift */; };
-		731981001D8E5C7A0077A774 /* DJRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731980FF1D8E5C7A0077A774 /* DJRequest.swift */; };
-		731981021D8E8A610077A774 /* DJSegmentLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731981011D8E8A610077A774 /* DJSegmentLine.swift */; };
+		7369C0131D8FDD6C00A83703 /* DJColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7369C0021D8FDD6C00A83703 /* DJColor.swift */; };
+		7369C0141D8FDD6C00A83703 /* DJCurveLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7369C0031D8FDD6C00A83703 /* DJCurveLine.swift */; };
+		7369C0151D8FDD6C00A83703 /* DJDashLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7369C0041D8FDD6C00A83703 /* DJDashLine.swift */; };
+		7369C0161D8FDD6C00A83703 /* DJDataWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7369C0051D8FDD6C00A83703 /* DJDataWindow.swift */; };
+		7369C0171D8FDD6C00A83703 /* DJExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7369C0061D8FDD6C00A83703 /* DJExtension.swift */; };
+		7369C0181D8FDD6C00A83703 /* DJExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7369C0071D8FDD6C00A83703 /* DJExtention.swift */; };
+		7369C0191D8FDD6C00A83703 /* DJFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7369C0081D8FDD6C00A83703 /* DJFont.swift */; };
+		7369C01A1D8FDD6C00A83703 /* DJKLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7369C0091D8FDD6C00A83703 /* DJKLine.swift */; };
+		7369C01B1D8FDD6C00A83703 /* DJKLineItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7369C00A1D8FDD6C00A83703 /* DJKLineItem.swift */; };
+		7369C01C1D8FDD6C00A83703 /* DJRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7369C00B1D8FDD6C00A83703 /* DJRequest.swift */; };
+		7369C01D1D8FDD6C00A83703 /* DJSegmentLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7369C00C1D8FDD6C00A83703 /* DJSegmentLine.swift */; };
+		7369C01E1D8FDD6C00A83703 /* DJShareTimeGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7369C00D1D8FDD6C00A83703 /* DJShareTimeGraph.swift */; };
+		7369C01F1D8FDD6C00A83703 /* DJShareTimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7369C00E1D8FDD6C00A83703 /* DJShareTimeModel.swift */; };
+		7369C0201D8FDD6C00A83703 /* DJStock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7369C00F1D8FDD6C00A83703 /* DJStock.swift */; };
+		7369C0211D8FDD6C00A83703 /* DJTapeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7369C0101D8FDD6C00A83703 /* DJTapeModel.swift */; };
+		7369C0221D8FDD6C00A83703 /* DJTapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7369C0111D8FDD6C00A83703 /* DJTapeView.swift */; };
+		7369C0231D8FDD6C00A83703 /* DJVolumnItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7369C0121D8FDD6C00A83703 /* DJVolumnItemView.swift */; };
+		7369C0251D8FDD9000A83703 /* DJUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7369C0241D8FDD9000A83703 /* DJUtility.swift */; };
+		7369C0271D8FDE0B00A83703 /* DJKLineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7369C0261D8FDE0B00A83703 /* DJKLineModel.swift */; };
+		7369C0291D8FDEA800A83703 /* ChartTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7369C0281D8FDEA800A83703 /* ChartTableViewController.swift */; };
+		7369C02B1D8FE0DD00A83703 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7369C02A1D8FE0DD00A83703 /* DetailViewController.swift */; };
+		7369C02D1D8FE77500A83703 /* DJGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7369C02C1D8FE77500A83703 /* DJGroupView.swift */; };
 		739DD7711D87AAA9008FCE75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739DD7701D87AAA9008FCE75 /* AppDelegate.swift */; };
 		739DD7731D87AAA9008FCE75 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739DD7721D87AAA9008FCE75 /* ViewController.swift */; };
 		739DD7761D87AAA9008FCE75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 739DD7741D87AAA9008FCE75 /* Main.storyboard */; };
 		739DD7781D87AAA9008FCE75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 739DD7771D87AAA9008FCE75 /* Assets.xcassets */; };
 		739DD77B1D87AAA9008FCE75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 739DD7791D87AAA9008FCE75 /* LaunchScreen.storyboard */; };
-		739DD7841D87C27B008FCE75 /* DJKLineItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739DD7831D87C27B008FCE75 /* DJKLineItem.swift */; };
-		739DD7861D87C9B8008FCE75 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739DD7851D87C9B8008FCE75 /* Color.swift */; };
-		739DD7881D87D546008FCE75 /* StockRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739DD7871D87D546008FCE75 /* StockRequest.swift */; };
 		739DD78B1D87D557008FCE75 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 739DD7891D87D557008FCE75 /* Alamofire.framework */; };
 		739DD78C1D87D557008FCE75 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 739DD78A1D87D557008FCE75 /* SnapKit.framework */; };
-		739DD78E1D87DAF9008FCE75 /* KLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739DD78D1D87DAF9008FCE75 /* KLine.swift */; };
-		739DD7901D87E0C6008FCE75 /* DJKLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739DD78F1D87E0C6008FCE75 /* DJKLine.swift */; };
-		739DD7921D87E832008FCE75 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739DD7911D87E832008FCE75 /* Utility.swift */; };
-		739DD7941D87E964008FCE75 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739DD7931D87E964008FCE75 /* Extension.swift */; };
-		739DD7961D87FE21008FCE75 /* DJDashLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739DD7951D87FE21008FCE75 /* DJDashLine.swift */; };
-		739DD7981D8803FF008FCE75 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739DD7971D8803FF008FCE75 /* Font.swift */; };
-		739DD79A1D88E79C008FCE75 /* DJVolumnItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739DD7991D88E79C008FCE75 /* DJVolumnItemView.swift */; };
-		739DD79C1D88F695008FCE75 /* DJExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739DD79B1D88F695008FCE75 /* DJExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0380F3FD6F0F252985B904D0 /* Pods_DJStock_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DJStock_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30C3BE582F49152018BA20A0 /* Pods-DJStock-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DJStock-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DJStock-Swift/Pods-DJStock-Swift.debug.xcconfig"; sourceTree = "<group>"; };
-		731980F51D89259A0077A774 /* DJDataWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJDataWindow.swift; sourceTree = "<group>"; };
-		731980F71D8931FC0077A774 /* DJExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJExtention.swift; sourceTree = "<group>"; };
-		731980F91D8E310B0077A774 /* DJCurveLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJCurveLine.swift; sourceTree = "<group>"; };
-		731980FB1D8E35B80077A774 /* DJShareTimeGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJShareTimeGraph.swift; sourceTree = "<group>"; };
-		731980FD1D8E39DB0077A774 /* DJShareTimeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJShareTimeModel.swift; sourceTree = "<group>"; };
-		731980FF1D8E5C7A0077A774 /* DJRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJRequest.swift; sourceTree = "<group>"; };
-		731981011D8E8A610077A774 /* DJSegmentLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJSegmentLine.swift; sourceTree = "<group>"; };
+		7369C0021D8FDD6C00A83703 /* DJColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJColor.swift; sourceTree = "<group>"; };
+		7369C0031D8FDD6C00A83703 /* DJCurveLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJCurveLine.swift; sourceTree = "<group>"; };
+		7369C0041D8FDD6C00A83703 /* DJDashLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJDashLine.swift; sourceTree = "<group>"; };
+		7369C0051D8FDD6C00A83703 /* DJDataWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJDataWindow.swift; sourceTree = "<group>"; };
+		7369C0061D8FDD6C00A83703 /* DJExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJExtension.swift; sourceTree = "<group>"; };
+		7369C0071D8FDD6C00A83703 /* DJExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJExtention.swift; sourceTree = "<group>"; };
+		7369C0081D8FDD6C00A83703 /* DJFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJFont.swift; sourceTree = "<group>"; };
+		7369C0091D8FDD6C00A83703 /* DJKLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJKLine.swift; sourceTree = "<group>"; };
+		7369C00A1D8FDD6C00A83703 /* DJKLineItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJKLineItem.swift; sourceTree = "<group>"; };
+		7369C00B1D8FDD6C00A83703 /* DJRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJRequest.swift; sourceTree = "<group>"; };
+		7369C00C1D8FDD6C00A83703 /* DJSegmentLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJSegmentLine.swift; sourceTree = "<group>"; };
+		7369C00D1D8FDD6C00A83703 /* DJShareTimeGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJShareTimeGraph.swift; sourceTree = "<group>"; };
+		7369C00E1D8FDD6C00A83703 /* DJShareTimeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJShareTimeModel.swift; sourceTree = "<group>"; };
+		7369C00F1D8FDD6C00A83703 /* DJStock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJStock.swift; sourceTree = "<group>"; };
+		7369C0101D8FDD6C00A83703 /* DJTapeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJTapeModel.swift; sourceTree = "<group>"; };
+		7369C0111D8FDD6C00A83703 /* DJTapeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJTapeView.swift; sourceTree = "<group>"; };
+		7369C0121D8FDD6C00A83703 /* DJVolumnItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJVolumnItemView.swift; sourceTree = "<group>"; };
+		7369C0241D8FDD9000A83703 /* DJUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJUtility.swift; sourceTree = "<group>"; };
+		7369C0261D8FDE0B00A83703 /* DJKLineModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJKLineModel.swift; sourceTree = "<group>"; };
+		7369C0281D8FDEA800A83703 /* ChartTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartTableViewController.swift; sourceTree = "<group>"; };
+		7369C02A1D8FE0DD00A83703 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		7369C02C1D8FE77500A83703 /* DJGroupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJGroupView.swift; sourceTree = "<group>"; };
 		739DD76D1D87AAA9008FCE75 /* DJStock-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DJStock-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		739DD7701D87AAA9008FCE75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		739DD7721D87AAA9008FCE75 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,19 +71,8 @@
 		739DD7771D87AAA9008FCE75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		739DD77A1D87AAA9008FCE75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		739DD77C1D87AAA9008FCE75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		739DD7831D87C27B008FCE75 /* DJKLineItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJKLineItem.swift; sourceTree = "<group>"; };
-		739DD7851D87C9B8008FCE75 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		739DD7871D87D546008FCE75 /* StockRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockRequest.swift; sourceTree = "<group>"; };
 		739DD7891D87D557008FCE75 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../../Library/Developer/Xcode/DerivedData/DJStock-Swift-fazfmcqqrepjmbglanlzwwdxpmqd/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		739DD78A1D87D557008FCE75 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = "../../../../Library/Developer/Xcode/DerivedData/DJStock-Swift-fazfmcqqrepjmbglanlzwwdxpmqd/Build/Products/Debug-iphonesimulator/SnapKit/SnapKit.framework"; sourceTree = "<group>"; };
-		739DD78D1D87DAF9008FCE75 /* KLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KLine.swift; sourceTree = "<group>"; };
-		739DD78F1D87E0C6008FCE75 /* DJKLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJKLine.swift; sourceTree = "<group>"; };
-		739DD7911D87E832008FCE75 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
-		739DD7931D87E964008FCE75 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
-		739DD7951D87FE21008FCE75 /* DJDashLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJDashLine.swift; sourceTree = "<group>"; };
-		739DD7971D8803FF008FCE75 /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
-		739DD7991D88E79C008FCE75 /* DJVolumnItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJVolumnItemView.swift; sourceTree = "<group>"; };
-		739DD79B1D88F695008FCE75 /* DJExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJExtension.swift; sourceTree = "<group>"; };
 		90ABF5E563C0BB3635D61873 /* Pods-DJStock-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DJStock-Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-DJStock-Swift/Pods-DJStock-Swift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,6 +109,33 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7369C0011D8FDD6C00A83703 /* Chart */ = {
+			isa = PBXGroup;
+			children = (
+				7369C0261D8FDE0B00A83703 /* DJKLineModel.swift */,
+				7369C0241D8FDD9000A83703 /* DJUtility.swift */,
+				7369C0021D8FDD6C00A83703 /* DJColor.swift */,
+				7369C0031D8FDD6C00A83703 /* DJCurveLine.swift */,
+				7369C0041D8FDD6C00A83703 /* DJDashLine.swift */,
+				7369C0051D8FDD6C00A83703 /* DJDataWindow.swift */,
+				7369C0061D8FDD6C00A83703 /* DJExtension.swift */,
+				7369C0071D8FDD6C00A83703 /* DJExtention.swift */,
+				7369C0081D8FDD6C00A83703 /* DJFont.swift */,
+				7369C0091D8FDD6C00A83703 /* DJKLine.swift */,
+				7369C00A1D8FDD6C00A83703 /* DJKLineItem.swift */,
+				7369C00B1D8FDD6C00A83703 /* DJRequest.swift */,
+				7369C00C1D8FDD6C00A83703 /* DJSegmentLine.swift */,
+				7369C00D1D8FDD6C00A83703 /* DJShareTimeGraph.swift */,
+				7369C00E1D8FDD6C00A83703 /* DJShareTimeModel.swift */,
+				7369C00F1D8FDD6C00A83703 /* DJStock.swift */,
+				7369C0101D8FDD6C00A83703 /* DJTapeModel.swift */,
+				7369C0111D8FDD6C00A83703 /* DJTapeView.swift */,
+				7369C0121D8FDD6C00A83703 /* DJVolumnItemView.swift */,
+				7369C02C1D8FE77500A83703 /* DJGroupView.swift */,
+			);
+			path = Chart;
+			sourceTree = "<group>";
+		};
 		739DD7641D87AAA9008FCE75 = {
 			isa = PBXGroup;
 			children = (
@@ -122,40 +157,17 @@
 		739DD76F1D87AAA9008FCE75 /* DJStock-Swift */ = {
 			isa = PBXGroup;
 			children = (
-				739DD7821D87C174008FCE75 /* Chart */,
+				7369C0011D8FDD6C00A83703 /* Chart */,
 				739DD7701D87AAA9008FCE75 /* AppDelegate.swift */,
 				739DD7721D87AAA9008FCE75 /* ViewController.swift */,
-				739DD7871D87D546008FCE75 /* StockRequest.swift */,
-				739DD78D1D87DAF9008FCE75 /* KLine.swift */,
-				739DD7911D87E832008FCE75 /* Utility.swift */,
-				739DD7931D87E964008FCE75 /* Extension.swift */,
+				7369C0281D8FDEA800A83703 /* ChartTableViewController.swift */,
+				7369C02A1D8FE0DD00A83703 /* DetailViewController.swift */,
 				739DD7741D87AAA9008FCE75 /* Main.storyboard */,
 				739DD7771D87AAA9008FCE75 /* Assets.xcassets */,
 				739DD7791D87AAA9008FCE75 /* LaunchScreen.storyboard */,
 				739DD77C1D87AAA9008FCE75 /* Info.plist */,
 			);
 			path = "DJStock-Swift";
-			sourceTree = "<group>";
-		};
-		739DD7821D87C174008FCE75 /* Chart */ = {
-			isa = PBXGroup;
-			children = (
-				739DD7831D87C27B008FCE75 /* DJKLineItem.swift */,
-				739DD7851D87C9B8008FCE75 /* Color.swift */,
-				739DD78F1D87E0C6008FCE75 /* DJKLine.swift */,
-				739DD7951D87FE21008FCE75 /* DJDashLine.swift */,
-				739DD7971D8803FF008FCE75 /* Font.swift */,
-				739DD7991D88E79C008FCE75 /* DJVolumnItemView.swift */,
-				739DD79B1D88F695008FCE75 /* DJExtension.swift */,
-				731980F51D89259A0077A774 /* DJDataWindow.swift */,
-				731980F71D8931FC0077A774 /* DJExtention.swift */,
-				731980F91D8E310B0077A774 /* DJCurveLine.swift */,
-				731980FB1D8E35B80077A774 /* DJShareTimeGraph.swift */,
-				731980FD1D8E39DB0077A774 /* DJShareTimeModel.swift */,
-				731980FF1D8E5C7A0077A774 /* DJRequest.swift */,
-				731981011D8E8A610077A774 /* DJSegmentLine.swift */,
-			);
-			name = Chart;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,26 +292,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				739DD79C1D88F695008FCE75 /* DJExtension.swift in Sources */,
-				739DD7941D87E964008FCE75 /* Extension.swift in Sources */,
-				739DD7981D8803FF008FCE75 /* Font.swift in Sources */,
-				739DD7861D87C9B8008FCE75 /* Color.swift in Sources */,
-				739DD7901D87E0C6008FCE75 /* DJKLine.swift in Sources */,
-				731980F61D89259A0077A774 /* DJDataWindow.swift in Sources */,
-				731980FC1D8E35B80077A774 /* DJShareTimeGraph.swift in Sources */,
-				739DD7961D87FE21008FCE75 /* DJDashLine.swift in Sources */,
-				731980FA1D8E310B0077A774 /* DJCurveLine.swift in Sources */,
-				731980F81D8931FC0077A774 /* DJExtention.swift in Sources */,
+				7369C0151D8FDD6C00A83703 /* DJDashLine.swift in Sources */,
+				7369C01C1D8FDD6C00A83703 /* DJRequest.swift in Sources */,
+				7369C02B1D8FE0DD00A83703 /* DetailViewController.swift in Sources */,
+				7369C0171D8FDD6C00A83703 /* DJExtension.swift in Sources */,
 				739DD7731D87AAA9008FCE75 /* ViewController.swift in Sources */,
-				731981021D8E8A610077A774 /* DJSegmentLine.swift in Sources */,
-				739DD7881D87D546008FCE75 /* StockRequest.swift in Sources */,
-				731980FE1D8E39DB0077A774 /* DJShareTimeModel.swift in Sources */,
-				739DD79A1D88E79C008FCE75 /* DJVolumnItemView.swift in Sources */,
-				739DD7921D87E832008FCE75 /* Utility.swift in Sources */,
+				7369C01E1D8FDD6C00A83703 /* DJShareTimeGraph.swift in Sources */,
+				7369C0181D8FDD6C00A83703 /* DJExtention.swift in Sources */,
+				7369C01A1D8FDD6C00A83703 /* DJKLine.swift in Sources */,
+				7369C0131D8FDD6C00A83703 /* DJColor.swift in Sources */,
 				739DD7711D87AAA9008FCE75 /* AppDelegate.swift in Sources */,
-				739DD7841D87C27B008FCE75 /* DJKLineItem.swift in Sources */,
-				739DD78E1D87DAF9008FCE75 /* KLine.swift in Sources */,
-				731981001D8E5C7A0077A774 /* DJRequest.swift in Sources */,
+				7369C0211D8FDD6C00A83703 /* DJTapeModel.swift in Sources */,
+				7369C0231D8FDD6C00A83703 /* DJVolumnItemView.swift in Sources */,
+				7369C0191D8FDD6C00A83703 /* DJFont.swift in Sources */,
+				7369C01F1D8FDD6C00A83703 /* DJShareTimeModel.swift in Sources */,
+				7369C0251D8FDD9000A83703 /* DJUtility.swift in Sources */,
+				7369C0141D8FDD6C00A83703 /* DJCurveLine.swift in Sources */,
+				7369C0271D8FDE0B00A83703 /* DJKLineModel.swift in Sources */,
+				7369C0291D8FDEA800A83703 /* ChartTableViewController.swift in Sources */,
+				7369C02D1D8FE77500A83703 /* DJGroupView.swift in Sources */,
+				7369C0161D8FDD6C00A83703 /* DJDataWindow.swift in Sources */,
+				7369C01D1D8FDD6C00A83703 /* DJSegmentLine.swift in Sources */,
+				7369C0201D8FDD6C00A83703 /* DJStock.swift in Sources */,
+				7369C0221D8FDD6C00A83703 /* DJTapeView.swift in Sources */,
+				7369C01B1D8FDD6C00A83703 /* DJKLineItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DJShareTimeGraph: UIView {
+public class DJShareTimeGraph: UIView {
     
     struct Constant {
         static let dashLineNum = 3
@@ -21,9 +21,25 @@ class DJShareTimeGraph: UIView {
     
     var margin: CGFloat = 5.0
     
+    lazy var averageLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = orangeColor
+        label.font = font(fontSize: 10)
+        label.text = "均价: --"
+        return label
+    }()
+    
+    lazy var newLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = KLineColor.Red.description
+        label.font = font(fontSize: 10)
+        label.text = "最新: -- -- --"
+        return label
+    }()
+    
     lazy var mainView: UIView = {
         let width = self.bounds.size.width - 2 * self.margin
-        let view = UIView(frame: CGRectMake(self.margin, self.margin, width, 2 * self.bounds.height / 3))
+        let view = UIView(frame: CGRectMake(self.margin, 12, width, 2 * self.bounds.height / 3))
         view.backgroundColor = whiteColor
         
         view.layer.borderColor = lineColor.CGColor
@@ -89,12 +105,16 @@ class DJShareTimeGraph: UIView {
         }
     }
     
+    convenience init() {
+        self.init(frame: CGRectZero)
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -106,6 +126,8 @@ class DJShareTimeGraph: UIView {
         
         backgroundColor = clearColor
         
+        addSubview(self.averageLabel)
+        addSubview(self.newLabel)
         addSubview(self.mainView)
         addSubview(self.volumnView)
         mainView.addSubview(self.curveLine)
@@ -175,6 +197,14 @@ class DJShareTimeGraph: UIView {
             make.left.equalTo(5)
             make.top.equalTo(2)
         }
+        averageLabel.snp_makeConstraints { make in
+            make.left.equalTo(5)
+            make.top.equalTo(0)
+        }
+        newLabel.snp_makeConstraints { make in
+            make.left.equalTo(averageLabel.snp_right).offset(5)
+            make.top.equalTo(averageLabel)
+        }
         
         addSubview(self.verticalLine)
         addSubview(self.timeLabel)
@@ -184,12 +214,19 @@ class DJShareTimeGraph: UIView {
     private var volumnItems = [VolumnItem]()
     private var currentVolumnItem: VolumnItem!
     func update(model: DJShareTimeModel) {
+        
+        if model.items.count == 0 {
+            return
+        }
+        
         var maxPrice = DBL_MIN
         var minPrice = DBL_MAX
         model.items.forEach { item in
             maxPrice = max(maxPrice, item.currentPrice)
             minPrice = min(minPrice, item.currentPrice)
         }
+        
+        updateLabel(model.items[model.items.count - 1])
         
         let spaceX = mainView.bounds.width / CGFloat(Constant.maxPointNum)
         var rate = CGFloat((maxPrice - minPrice)) / mainView.bounds.height
@@ -254,11 +291,16 @@ class DJShareTimeGraph: UIView {
             volumnView.addSubview(itemView)
             let y = CGFloat(mx - Double(volumn.volumn)) / rate
             itemView.tag = Constant.volumnTagStart + index
-            itemView.frame = CGRectMake(x, y, index < volumns.count - 1 ? lineWidth : mainView.bounds.width - x, CGFloat(volumn.volumn) / rate)
+            itemView.frame = CGRectMake(x, y, lineWidth, CGFloat(volumn.volumn) / rate)
             itemView.volumnColor = volumn.color
             x += volumnView.bounds.width / CGFloat(Constant.maxPointNum)
         }
         addVolumnLabelAttr(volumnItems[model.items.count - 1].color.description)
+    }
+    
+    private func updateLabel(item: DJShareTimeModel.Item) {
+        averageLabel.text = String(format: "均价: %.2f", item.averagePrice)
+        newLabel.text = String(format: "最新: %.2f %.2f %.2f%%", item.currentPrice, item.currentPrice - item.averagePrice, 100 * (item.currentPrice - item.averagePrice) / item.averagePrice)
     }
     
     // MARK: - action
@@ -270,6 +312,9 @@ class DJShareTimeGraph: UIView {
             guard index < model.items.count && index >= 0 else {
                return
             }
+            
+            updateLabel(model.items[index])
+            
             let volumn = model.items[index].volumn
             volumnLabel.text = "量:\(volumn) 现手:\(currentVolumnItem.volumn)"
             addVolumnLabelAttr(volumnItems[index].color.description)
@@ -283,6 +328,7 @@ class DJShareTimeGraph: UIView {
             verticalLine.segments = [mainView.frame.height, volumnView.frame.origin.y - mainView.frame.origin.y]
             
         } else {
+            updateLabel(model.items[model.items.count - 1])
             show = false
             volumnLabel.text = "量:\(currentVolumnItem.volumn) 现手:\(currentVolumnItem.volumn)"
             addVolumnLabelAttr(volumnItems[model.items.count - 1].color.description)
