@@ -8,11 +8,11 @@
 
 <img src="https://github.com/dyljqq/DJStock-Swift/raw/master/ScreenShot/1.jpeg" width="187.5" height="337.5"/> 
 <img src="https://github.com/dyljqq/DJStock-Swift/raw/master/ScreenShot/2.jpeg" width="187.5" height="337.5"/> 
-<img src="https://github.com/dyljqq/DJStock-Swift/raw/master/ScreenShot/3.jpeg" width="187.5" height="337.5"/>
-<img src="https://github.com/dyljqq/DJStock-Swift/raw/master/ScreenShot/4.jpeg" width="187.5" height="337.5"/> 
-<img src="https://github.com/dyljqq/DJStock-Swift/raw/master/ScreenShot/5.jpeg" width="187.5" height="337.5"/> 
-<img src="https://github.com/dyljqq/DJStock-Swift/raw/master/ScreenShot/6.jpeg" width="187.5" height="337.5"/>
-<img src="https://github.com/dyljqq/DJStock-Swift/raw/master/ScreenShot/7.jpeg" width="187.5" height="337.5"/>
+<img src="https://github.com/dyljqq/DJStock-Swift/raw/master/ScreenShot/3.png" width="187.5" height="337.5"/>
+<img src="https://github.com/dyljqq/DJStock-Swift/raw/master/ScreenShot/4.png" width="187.5" height="337.5"/> 
+<img src="https://github.com/dyljqq/DJStock-Swift/raw/master/ScreenShot/5.png" width="187.5" height="337.5"/> 
+<img src="https://github.com/dyljqq/DJStock-Swift/raw/master/ScreenShot/6.png" width="187.5" height="337.5"/>
+<img src="https://github.com/dyljqq/DJStock-Swift/raw/master/ScreenShot/7.png" width="187.5" height="337.5"/>
 
 #### Usage
 
