@@ -8,6 +8,16 @@
 
 import UIKit
 
+extension UIView {
+    
+    var dj_yh: CGFloat {
+        get {
+            return self.frame.origin.y + self.frame.size.height
+        }
+    }
+    
+}
+
 extension UILabel {
     
     var labelWidth: CGFloat {

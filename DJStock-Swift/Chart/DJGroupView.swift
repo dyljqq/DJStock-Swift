@@ -10,8 +10,8 @@ import UIKit
 
 public class DJGroupView: UIView {
     
-    let shareTimeView = DJShareTimeGraph(frame: CGRectMake(0, 100, screenWidth - 100, 300))
-    let tapeView = DJTapeView(frame: CGRectMake(screenWidth - 100, 112, 100, 288))
+    var shareTimeView: DJShareTimeGraph!
+    var tapeView: DJTapeView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -23,6 +23,10 @@ public class DJGroupView: UIView {
     }
     
     private func setup() {
+        
+        shareTimeView =  DJShareTimeGraph(frame: CGRectMake(0, 0, screenWidth * 2 / 3, bounds.height))
+        tapeView = DJTapeView(frame: CGRectMake(screenWidth * 2 / 3, 12, screenSize.width / 3, bounds.height - 12))
+        
         addSubview(shareTimeView)
         addSubview(tapeView)
     }

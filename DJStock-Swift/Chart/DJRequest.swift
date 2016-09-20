@@ -53,10 +53,8 @@ public class DJRequest {
                     print("response value: \(value)")
                     let cfEnc = CFStringEncodings.GB_18030_2000
                     let enc = CFStringConvertEncodingToNSStringEncoding(CFStringEncoding(cfEnc.rawValue))
-                    let dogString:String = NSString(data: value, encoding: enc) as! String
-                    let arr = dogString.componentsSeparatedByString("\"")
-                    let array = arr.count >= 2 ? arr[1].componentsSeparatedByString(",") : []
-                    successCallback(value: [DJRequestUtil.data: array])
+                    let dogString: String = NSString(data: value, encoding: enc) as! String
+                    successCallback(value: [DJRequestUtil.data: dogString])
                 case .Failure(let error):
                     print("Network error: \(error)")
                     if let failureCallback = failureCallback {
@@ -141,10 +139,14 @@ public class DJRequest {
     class func getTapeRequest(URLString: String, callback: (array: [DJTapeModel])-> (), failureCallback: FailureCallback? = nil) {
         DJRequest.get(URLString: URLString, type: DJRequestType.HTTP, successCallback: { response in
             
-            guard let data = response[DJRequestUtil.data] as? [String] else {
+            guard let dogString = response[DJRequestUtil.data] as? String else {
                 print("tape: data is nil")
                 return
             }
+            
+            let arr = dogString.componentsSeparatedByString("\"")
+            let data = arr.count >= 2 ? arr[1].componentsSeparatedByString(",") : []
+            
             guard data.count >= 30 else {
                 print("tape: data is not valid...")
                 return
@@ -171,6 +173,61 @@ public class DJRequest {
                 }
                 
             })
+    }
+    
+    // stock search
+    class func stockSearchRequest(URLString: String, callback: (array: [DJStockModel])-> (), failureCallback: FailureCallback? = nil) {
+        DJRequest.get(URLString: URLString, type: .HTTP, successCallback: { response in
+            guard let dogString = response[DJRequestUtil.data] as? String else {
+                return
+            }
+            
+            let array = dogString.componentsSeparatedByString("\"")
+            guard array.count >= 2 else{
+                return
+            }
+            
+            let stocks = array[1].componentsSeparatedByString(";")
+            var mutableArray = [DJStockModel]()
+            
+            guard stocks[0] != "" else {
+                callback(array: mutableArray)
+                return
+            }
+            for stock in stocks {
+                var model = DJStockModel()
+                model.convert(stock.componentsSeparatedByString(","))
+                mutableArray.append(model)
+            }
+            callback(array: mutableArray)
+        })
+    }
+    
+    // stock current price
+    class func getCurrentPriceRequest(stocks: [String], callback: (array: [String])-> ()) {
+        let URLString = ("http://hq.sinajs.cn/list=" + stocks.joinWithSeparator(",")).stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet()) ?? ""
+        DJRequest.get(URLString: URLString, type: .HTTP, successCallback: { response in
+            guard let dogString = response[DJRequestUtil.data] else {
+                return
+            }
+            //var hq_str_sh000001="上证指数,3027.1717,3026.0513,3022.9995,3027.8165,3015.8804,0,0,118924117,139662303158,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2016-09-20,15:01:57,00";
+            var prices = [String]()
+            let array = dogString.componentsSeparatedByString("\n")
+            for str in array {
+                var arr = str.componentsSeparatedByString("\"")
+                if arr.count >= 3 {
+                    let a = arr[1].componentsSeparatedByString(",")
+                    if a.count >= 3 {
+                        prices += [a[2], a[3]]
+                    } else {
+                        prices += ["", ""]
+                    }
+                } else {
+                    prices += ["", ""]
+                }
+            }
+            callback(array: prices)
+        })
     }
     
 }

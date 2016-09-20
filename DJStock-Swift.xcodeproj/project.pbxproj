@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		15200BE863F7615C0B847836 /* Pods_DJStock_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0380F3FD6F0F252985B904D0 /* Pods_DJStock_Swift.framework */; };
+		7326361B1D911D3600E295EA /* DJStockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7326361A1D911D3600E295EA /* DJStockModel.swift */; };
+		7326361D1D912D3800E295EA /* DJStockSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7326361C1D912D3800E295EA /* DJStockSearchController.swift */; };
+		7326361F1D912E4800E295EA /* DJStockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7326361E1D912E4800E295EA /* DJStockCell.swift */; };
 		7369C0131D8FDD6C00A83703 /* DJColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7369C0021D8FDD6C00A83703 /* DJColor.swift */; };
 		7369C0141D8FDD6C00A83703 /* DJCurveLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7369C0031D8FDD6C00A83703 /* DJCurveLine.swift */; };
 		7369C0151D8FDD6C00A83703 /* DJDashLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7369C0041D8FDD6C00A83703 /* DJDashLine.swift */; };
 		7369C0161D8FDD6C00A83703 /* DJDataWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7369C0051D8FDD6C00A83703 /* DJDataWindow.swift */; };
-		7369C0171D8FDD6C00A83703 /* DJExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7369C0061D8FDD6C00A83703 /* DJExtension.swift */; };
 		7369C0181D8FDD6C00A83703 /* DJExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7369C0071D8FDD6C00A83703 /* DJExtention.swift */; };
 		7369C0191D8FDD6C00A83703 /* DJFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7369C0081D8FDD6C00A83703 /* DJFont.swift */; };
 		7369C01A1D8FDD6C00A83703 /* DJKLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7369C0091D8FDD6C00A83703 /* DJKLine.swift */; };
@@ -31,7 +33,6 @@
 		7369C02B1D8FE0DD00A83703 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7369C02A1D8FE0DD00A83703 /* DetailViewController.swift */; };
 		7369C02D1D8FE77500A83703 /* DJGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7369C02C1D8FE77500A83703 /* DJGroupView.swift */; };
 		739DD7711D87AAA9008FCE75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739DD7701D87AAA9008FCE75 /* AppDelegate.swift */; };
-		739DD7731D87AAA9008FCE75 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739DD7721D87AAA9008FCE75 /* ViewController.swift */; };
 		739DD7761D87AAA9008FCE75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 739DD7741D87AAA9008FCE75 /* Main.storyboard */; };
 		739DD7781D87AAA9008FCE75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 739DD7771D87AAA9008FCE75 /* Assets.xcassets */; };
 		739DD77B1D87AAA9008FCE75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 739DD7791D87AAA9008FCE75 /* LaunchScreen.storyboard */; };
@@ -42,11 +43,13 @@
 /* Begin PBXFileReference section */
 		0380F3FD6F0F252985B904D0 /* Pods_DJStock_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DJStock_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30C3BE582F49152018BA20A0 /* Pods-DJStock-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DJStock-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DJStock-Swift/Pods-DJStock-Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		7326361A1D911D3600E295EA /* DJStockModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJStockModel.swift; sourceTree = "<group>"; };
+		7326361C1D912D3800E295EA /* DJStockSearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJStockSearchController.swift; sourceTree = "<group>"; };
+		7326361E1D912E4800E295EA /* DJStockCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJStockCell.swift; sourceTree = "<group>"; };
 		7369C0021D8FDD6C00A83703 /* DJColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJColor.swift; sourceTree = "<group>"; };
 		7369C0031D8FDD6C00A83703 /* DJCurveLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJCurveLine.swift; sourceTree = "<group>"; };
 		7369C0041D8FDD6C00A83703 /* DJDashLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJDashLine.swift; sourceTree = "<group>"; };
 		7369C0051D8FDD6C00A83703 /* DJDataWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJDataWindow.swift; sourceTree = "<group>"; };
-		7369C0061D8FDD6C00A83703 /* DJExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJExtension.swift; sourceTree = "<group>"; };
 		7369C0071D8FDD6C00A83703 /* DJExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJExtention.swift; sourceTree = "<group>"; };
 		7369C0081D8FDD6C00A83703 /* DJFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJFont.swift; sourceTree = "<group>"; };
 		7369C0091D8FDD6C00A83703 /* DJKLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJKLine.swift; sourceTree = "<group>"; };
@@ -66,7 +69,6 @@
 		7369C02C1D8FE77500A83703 /* DJGroupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJGroupView.swift; sourceTree = "<group>"; };
 		739DD76D1D87AAA9008FCE75 /* DJStock-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DJStock-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		739DD7701D87AAA9008FCE75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		739DD7721D87AAA9008FCE75 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		739DD7751D87AAA9008FCE75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		739DD7771D87AAA9008FCE75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		739DD77A1D87AAA9008FCE75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -118,7 +120,6 @@
 				7369C0031D8FDD6C00A83703 /* DJCurveLine.swift */,
 				7369C0041D8FDD6C00A83703 /* DJDashLine.swift */,
 				7369C0051D8FDD6C00A83703 /* DJDataWindow.swift */,
-				7369C0061D8FDD6C00A83703 /* DJExtension.swift */,
 				7369C0071D8FDD6C00A83703 /* DJExtention.swift */,
 				7369C0081D8FDD6C00A83703 /* DJFont.swift */,
 				7369C0091D8FDD6C00A83703 /* DJKLine.swift */,
@@ -132,6 +133,9 @@
 				7369C0111D8FDD6C00A83703 /* DJTapeView.swift */,
 				7369C0121D8FDD6C00A83703 /* DJVolumnItemView.swift */,
 				7369C02C1D8FE77500A83703 /* DJGroupView.swift */,
+				7326361A1D911D3600E295EA /* DJStockModel.swift */,
+				7326361C1D912D3800E295EA /* DJStockSearchController.swift */,
+				7326361E1D912E4800E295EA /* DJStockCell.swift */,
 			);
 			path = Chart;
 			sourceTree = "<group>";
@@ -159,7 +163,6 @@
 			children = (
 				7369C0011D8FDD6C00A83703 /* Chart */,
 				739DD7701D87AAA9008FCE75 /* AppDelegate.swift */,
-				739DD7721D87AAA9008FCE75 /* ViewController.swift */,
 				7369C0281D8FDEA800A83703 /* ChartTableViewController.swift */,
 				7369C02A1D8FE0DD00A83703 /* DetailViewController.swift */,
 				739DD7741D87AAA9008FCE75 /* Main.storyboard */,
@@ -294,12 +297,13 @@
 			files = (
 				7369C0151D8FDD6C00A83703 /* DJDashLine.swift in Sources */,
 				7369C01C1D8FDD6C00A83703 /* DJRequest.swift in Sources */,
+				7326361D1D912D3800E295EA /* DJStockSearchController.swift in Sources */,
 				7369C02B1D8FE0DD00A83703 /* DetailViewController.swift in Sources */,
-				7369C0171D8FDD6C00A83703 /* DJExtension.swift in Sources */,
-				739DD7731D87AAA9008FCE75 /* ViewController.swift in Sources */,
+				7326361F1D912E4800E295EA /* DJStockCell.swift in Sources */,
 				7369C01E1D8FDD6C00A83703 /* DJShareTimeGraph.swift in Sources */,
 				7369C0181D8FDD6C00A83703 /* DJExtention.swift in Sources */,
 				7369C01A1D8FDD6C00A83703 /* DJKLine.swift in Sources */,
+				7326361B1D911D3600E295EA /* DJStockModel.swift in Sources */,
 				7369C0131D8FDD6C00A83703 /* DJColor.swift in Sources */,
 				739DD7711D87AAA9008FCE75 /* AppDelegate.swift in Sources */,
 				7369C0211D8FDD6C00A83703 /* DJTapeModel.swift in Sources */,

@@ -14,7 +14,7 @@ class ChartTableViewController: UITableViewController {
         static let cellIdentifier = "cell"
     }
     
-    var contents = ["KLine", "ShareTimeGraph", "TapeView", "Group"]
+    var contents = ["KLine", "ShareTimeGraph", "TapeView", "Group", "Search"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +57,10 @@ extension ChartTableViewController {
         case 1: detail.type = .ShareTime
         case 2: detail.type = .Tape
         case 3: detail.type = .Group
+        case 4:
+            let navigation = UINavigationController(rootViewController: DJStockSearchController())
+            presentViewController(navigation, animated: true, completion: nil)
+            return
         default:
             break
         }

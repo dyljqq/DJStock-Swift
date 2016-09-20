@@ -4,6 +4,8 @@
 
 2016.9.14 add pinch gesture to kline, add volumn view and so on...
 
+2016.9.20 add stock search
+
 ####App runtime effect
 
 <img src="https://github.com/dyljqq/DJStock-Swift/raw/master/ScreenShot/1.jpeg" width="187.5" height="337.5"/> 
@@ -13,6 +15,7 @@
 <img src="https://github.com/dyljqq/DJStock-Swift/raw/master/ScreenShot/5.png" width="187.5" height="337.5"/> 
 <img src="https://github.com/dyljqq/DJStock-Swift/raw/master/ScreenShot/6.png" width="187.5" height="337.5"/>
 <img src="https://github.com/dyljqq/DJStock-Swift/raw/master/ScreenShot/7.png" width="187.5" height="337.5"/>
+<img src="https://github.com/dyljqq/DJStock-Swift/raw/master/ScreenShot/8.png" width="187.5" height="337.5"/>
 
 #### Usage
 
@@ -34,6 +37,7 @@ just need three line code
 combination of ShareTimeGraph, the TapeView and the DJGroupView. So you can use the type named Group in StockType.
 4. You can also request the data to use the DJRequest class.
 5. It support some gesture, like tap, pinch and long press.
+6. You can add the stock search function to your app.
 
 For more, you can see the demo in the DetailViewController file. You can read my source code, and maybe you can give me some suggestions to make this project better.
 
