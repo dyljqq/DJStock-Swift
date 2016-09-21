@@ -13,10 +13,20 @@ import SnapKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    var navigationController: UINavigationController?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        window?.backgroundColor = clearColor
+        
+        navigationController = UINavigationController(rootViewController: ChartTableViewController())
+        window?.rootViewController = navigationController
+        
+        window?.makeKeyAndVisible()
+        
         return true
     }
 

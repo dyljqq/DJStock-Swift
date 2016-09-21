@@ -8,6 +8,10 @@
 
 import UIKit
 
+private let KLinePrefix = "http://img1.money.126.net/data/hs/kline/day/history/2016/"
+private let ShareTimePrefix = "http://img1.money.126.net/data/hs/time/today/"
+private let TapePrefix = "http://hq.sinajs.cn/list="
+
 class DJStockSearchController: UIViewController {
     
     struct Constant {
@@ -20,6 +24,7 @@ class DJStockSearchController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.showsVerticalScrollIndicator = false
+        tableView.tableFooterView = UIView()
         tableView.registerClass(DJStockCell.self, forCellReuseIdentifier: Constant.cellIdentifier)
         return tableView
     }()
@@ -31,14 +36,13 @@ class DJStockSearchController: UIViewController {
         searchBar.placeholder = "点击搜索股票"
         searchBar.backgroundColor = clearColor
         searchBar.showsCancelButton = true
-        searchBar.becomeFirstResponder()
         return searchBar
     }()
     
     
     var data = [DJStockModel]() {
         didSet {
-            tableView.reloadData()
+            self.tableView.reloadData()
         }
     }
     
@@ -47,15 +51,15 @@ class DJStockSearchController: UIViewController {
         setup()
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        searchBar.becomeFirstResponder()
+    }
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        searchBar.snp_makeConstraints { make in
-            make.left.equalToSuperview().offset(leftSpace)
-            make.right.equalToSuperview().offset(-leftSpace)
-            make.height.equalTo(44)
-            make.top.equalToSuperview()
-        }
+        self.searchBar.frame = CGRectMake(leftSpace, 0, screenSize.width - 2 * leftSpace, 44)
         tableView.snp_makeConstraints { make in
             make.left.right.bottom.equalToSuperview()
             make.top.equalTo(self.view)
@@ -63,10 +67,33 @@ class DJStockSearchController: UIViewController {
     }
     
     private func setup() {
-        view.backgroundColor = whiteColor
         
-        addTitleView()
+        title = "Stock Search"
+        
+        view.backgroundColor = whiteColor
         view.addSubview(self.tableView)
+        
+        navigationController?.navigationBar.topItem?.titleView = self.searchBar
+        
+        // clear the background view
+        for subview in searchBar.subviews {
+            if subview.subviews.count > 0 {
+                subview.subviews.first?.removeFromSuperview()
+            }
+        }
+        
+        if let subviews = searchBar.subviews.last?.subviews {
+            for subview in subviews {
+                if let subview = subview as? UIButton {
+                    subview.setTitle("取消", forState: .Normal)
+                } else if let textField = subview as? UITextField {
+                    textField.layer.borderWidth = 0.5
+                    textField.layer.borderColor = lineColor.CGColor
+                    textField.layer.cornerRadius = 3
+                    textField.layer.masksToBounds = true
+                }
+            }
+        }
     }
     
     func getCurrentPrices(array: [DJStockModel]) {
@@ -87,18 +114,6 @@ class DJStockSearchController: UIViewController {
         })
     }
     
-    private func addTitleView() {
-        navigationItem.titleView = self.searchBar
-        
-        if let subviews = searchBar.subviews.last?.subviews {
-            for subview in subviews {
-                if subview is UIButton {
-                    (subview as! UIButton).setTitle("取消", forState: .Normal)
-                }
-            }
-        }
-    }
-    
     private func request(URLString: String) {
         DJRequest.stockSearchRequest(URLString, callback: { array in
             self.getCurrentPrices(array)
@@ -111,6 +126,49 @@ extension DJStockSearchController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        // TODO
+        let stockFull = data[indexPath.row].stockFull
+        let sheetAction = UIAlertController(title: "Choose", message: "", preferredStyle: .ActionSheet)
+        let kLineAction = UIAlertAction(title: "KLine", style: .Default, handler: { action in
+            let detail = DetailViewController()
+            detail.name = "KLine"
+            detail.type = .KLine
+            let suffix = stockFull.containsString("sh") ? "0" : "1" + self.data[indexPath.row].stockCode
+            detail.URLStrings = [KLinePrefix + suffix + ".json"]
+            self.navigationController?.pushViewController(detail, animated: true)
+        })
+        let shareTimeAction = UIAlertAction(title: "ShareTime", style: .Default, handler: { action in
+            let detail = DetailViewController()
+            detail.name = "ShareTime"
+            detail.type = .ShareTime
+            let suffix = stockFull.containsString("sh") ? "0" : "1" + self.data[indexPath.row].stockCode
+            detail.URLStrings = [ShareTimePrefix + suffix + ".json"]
+            self.navigationController?.pushViewController(detail, animated: true)
+        })
+        let tapeAction = UIAlertAction(title: "Tape", style: .Default, handler: { action in
+            let detail = DetailViewController()
+            detail.name = "Tape"
+            detail.type = .Tape
+            detail.URLStrings = [TapePrefix + stockFull]
+            self.navigationController?.pushViewController(detail, animated: true)
+        })
+        let groupAction = UIAlertAction(title: "Group", style: .Default, handler: { action in
+            let detail = DetailViewController()
+            detail.name = "Group"
+            detail.type = .Group
+            detail.URLStrings = [ShareTimePrefix + self.data[indexPath.row].stockCode + ".json", TapePrefix + stockFull]
+            self.navigationController?.pushViewController(detail, animated: true)
+        })
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: { action in
+            // TODO
+        })
+        sheetAction.addAction(kLineAction)
+        sheetAction.addAction(shareTimeAction)
+        sheetAction.addAction(tapeAction)
+        sheetAction.addAction(groupAction)
+        sheetAction.addAction(cancelAction)
+        presentViewController(sheetAction, animated: true, completion: nil)
     }
     
 }
@@ -136,7 +194,7 @@ extension DJStockSearchController: UITableViewDataSource {
 extension DJStockSearchController: UISearchBarDelegate {
     
     func searchBarCancelButtonClicked(searchBar: UISearchBar) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {

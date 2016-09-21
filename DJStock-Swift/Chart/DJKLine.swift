@@ -149,7 +149,6 @@ public class DJKLine: UIView {
             if index == 0 {
                 y -= label.frame.height
             }
-            
         }
         
         for index in 0..<2 {
@@ -353,3 +352,4 @@ public class DJKLine: UIView {
     }
     
 }
+
